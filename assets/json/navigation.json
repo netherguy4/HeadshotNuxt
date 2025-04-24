@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Головна",
+    "href": "/"
+  },
+  {
+    "name": "Акції",
+    "href": "/promo"
+  },
+  {
+    "name": "Пейнтбол",
+    "href": "/paintball"
+  },
+  {
+    "name": "Страйкбол",
+    "href": "/airsoft"
+  },
+  {
+    "name": "Квести",
+    "href": "/quests"
+  },
+  {
+    "name": "Інші послуги",
+    "href": "/other"
+  },
+  {
+    "name": "Харчування",
+    "href": "/food"
+  },
+  {
+    "name": "Альтанки",
+    "href": "/alt"
+  }
+]

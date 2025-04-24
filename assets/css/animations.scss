@@ -1,0 +1,44 @@
+.spoiler__image {
+  & path:last-child {
+    transition: $hoverTime;
+    transform-origin: center;
+  }
+  &._minus {
+    & path:last-child {
+      rotate: 90deg;
+      opacity: 0;
+    }
+  }
+}
+
+.header__burger {
+  overflow: visible;
+  transition: 0.3s;
+  transform-origin: center center;
+  path {
+    transition: 0.3s;
+    &:first-child {
+      transform-origin: top right;
+    }
+    &:last-child {
+      transform-origin: bottom right;
+    }
+  }
+  &._active {
+    translate: -35% -1%;
+    scale: 1.11;
+    path {
+      &:first-child {
+        rotate: -45deg;
+      }
+      &:nth-child(2) {
+        transition: 0.2s;
+        opacity: 0;
+      }
+      &:last-child {
+        rotate: 45deg;
+        translate: 0% 6%;
+      }
+    }
+  }
+}

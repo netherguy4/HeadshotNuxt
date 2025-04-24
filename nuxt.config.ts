@@ -79,7 +79,15 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ["/css/nullstyle.css", "/css/base.scss", "/css/utils.scss"],
+  css: [
+    "/css/nullstyle.css",
+    "/css/base.scss",
+    "/css/utils.scss",
+    "/css/animations.scss",
+    "/css/vendors/formkit.scss",
+    "/css/vendors/swiper.scss",
+    "/css/vendors/vue-toastifications.scss",
+  ],
 
   image: {
     quality: 75,
@@ -91,14 +99,14 @@ export default defineNuxtConfig({
         from: "gsap",
         imports: ["gsap"],
       },
-      // {
-      //   from: "gsap/ScrollToPlugin",
-      //   imports: ["ScrollToPlugin"],
-      // },
-      // {
-      //   from: "gsap/ScrollTrigger",
-      //   imports: ["ScrollTrigger"],
-      // },
+      {
+        from: "gsap/ScrollToPlugin",
+        imports: ["ScrollToPlugin"],
+      },
+      {
+        from: "gsap/ScrollTrigger",
+        imports: ["ScrollTrigger"],
+      },
     ],
   },
 
@@ -157,5 +165,6 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@nuxt/image",
     "@nuxt/fonts",
+    "nuxt-svgo",
   ],
 });

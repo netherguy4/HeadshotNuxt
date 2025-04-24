@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Пейнтбол",
+    "image": "paintball",
+    "href": "/paintball"
+  },
+  {
+    "title": "Страйкбол",
+    "image": "strikeball",
+    "href": "/airsoft"
+  },
+  {
+    "title": "Джелібол",
+    "image": "jellyball",
+    "href": "/"
+  },
+  {
+    "title": "Квести",
+    "image": "quests",
+    "href": "/"
+  },
+  {
+    "title": "Харчування",
+    "image": "food",
+    "href": "/"
+  },
+  {
+    "title": "Вотерігри",
+    "image": "watergames",
+    "href": "/"
+  },
+  {
+    "title": "Тімбілдінг",
+    "image": "teambuilding",
+    "href": "/"
+  }
+]
