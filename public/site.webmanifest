@@ -1,6 +1,6 @@
 {
-  "name": "Upack Project",
-  "short_name": "Upack",
+  "name": "HEADSHOT Одесса",
+  "short_name": "Headshot",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#575757",
+  "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "display": "standalone"
 }

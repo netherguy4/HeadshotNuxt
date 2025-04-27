@@ -54,12 +54,13 @@
     &__logo {
       width: 179px;
       display: block;
-      padding: 0 0 33px;
+      padding: 0 0 24px;
       margin: 0 auto 5px;
       filter: brightness(0) saturate(100%) invert(20%) sepia(16%)
         saturate(7177%) hue-rotate(119deg) brightness(92%) contrast(86%);
       @media (min-width: $M) {
         margin: 0 0 5px 0;
+        padding: 0 0 33px;
         width: 250px;
       }
     }
