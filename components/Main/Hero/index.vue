@@ -11,45 +11,11 @@
             >Найбільший пейнтбол та страйкбол в україні</h1
           >
           <ul class="hero__list" id="hero-list">
-            <ClientOnly>
-              <li style="order: 1" class="hero__li">Криті/відкриті локації</li>
-              <li
-                :style="isLargeScreen ? 'order: 2' : 'order: 4'"
-                class="hero__li"
-              >
-                Велика площа на 22000 кв.м.
-              </li>
-              <li
-                :style="isLargeScreen ? 'order: 4' : 'order: 2'"
-                class="hero__li"
-                style="grid-row: span 2"
-              >
-                Більше 150 комплектів обладнання для пейнтболу та страйкболу
-              </li>
-              <li style="order: 5" class="hero__li"
-                >Можливість організації харчування на полігоні</li
-              >
-              <li style="order: 6" class="hero__li">Більше 15 років досвіду</li>
-            </ClientOnly>
-          </ul>
-          <div class="hero__buttons">
-            <button @click="scrollToForm" class="hero__button"
-              >Замовити гру</button
-            >
-            <button @click="scrollToForm" class="hero__button"
-              >Порахувати вартість</button
-            >
-          </div>
-        </div>
-        <ClientOnly>
-          <teleport defer :disabled="isLargeScreen" to="#hero-list">
-            <component
-              :is="isLargeScreen ? 'div' : 'li'"
-              :style="isLargeScreen ? '' : 'order: 3;'"
-              class="hero__image-wrapper image-wrapper"
-            >
-              <SvgoVectorArrow filled class="hero__image--arrow image" />
-              <SvgoDash filled class="hero__image--dash image" />
+            <li class="hero__li">Криті/відкриті локації</li>
+            <li class="hero__li" style="grid-row: span 2">
+              Більше 150 комплектів обладнання для пейнтболу та страйкболу
+            </li>
+            <li class="hero__image-wrapper _list image-wrapper">
               <NuxtImg
                 loading="eager"
                 src="/img/hero/front.png"
@@ -75,9 +41,51 @@
                 alt="player"
                 class="hero__image--back image"
               />
-            </component>
-          </teleport>
-        </ClientOnly>
+            </li>
+            <li class="hero__li"> Велика площа на 22000 кв.м. </li>
+            <li class="hero__li"
+              >Можливість організації харчування на полігоні</li
+            >
+            <li class="hero__li">Більше 15 років досвіду</li>
+          </ul>
+          <div class="hero__buttons">
+            <button @click="scrollToForm" class="hero__button"
+              >Замовити гру</button
+            >
+            <button @click="scrollToForm" class="hero__button"
+              >Порахувати вартість</button
+            >
+          </div>
+        </div>
+        <div class="hero__image-wrapper image-wrapper">
+          <SvgoVectorArrow filled class="hero__image--arrow image" />
+          <SvgoDash filled class="hero__image--dash image" />
+          <NuxtImg
+            loading="eager"
+            src="/img/hero/front.png"
+            preload
+            :quality="80"
+            format="webp"
+            fit="inside"
+            sizes="200px xs:450px sm:700px md:1000px lg:800px"
+            width="792"
+            height="792"
+            alt="player"
+            class="hero__image--front image"
+          />
+          <NuxtImg
+            loading="eager"
+            src="/img/hero/back.png"
+            preload
+            format="webp"
+            fit="inside"
+            sizes="200px xs:450px sm:700px md:900px lg:700px"
+            width="680"
+            height="680"
+            alt="player"
+            class="hero__image--back image"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -85,8 +93,6 @@
 
 <script setup>
   gsap.registerPlugin(ScrollToPlugin);
-
-  const isLargeScreen = useMediaQuery("(min-width: 1024px)");
 
   const scrollToForm = () => {
     gsap.to(window, {
@@ -138,10 +144,10 @@
       column-gap: torem(50);
       row-gap: torem(5);
       padding: 30px 0;
-      min-height: em(532, 16);
       @media (min-width: $L) {
-        min-height: em(174, 20);
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-auto-flow: column dense;
       }
     }
     &__li {
@@ -195,17 +201,24 @@
     }
     &__image-wrapper {
       pointer-events: none;
-      position: relative;
       transform-origin: top;
       overflow: visible;
-      padding: 0 0 percent(301, 320);
+      &._list {
+        position: relative;
+        // transform-origin: top;
+        // overflow: visible;
+        padding: 0 0 percent(301, 320);
+        @media (min-width: $L) {
+          display: none;
+        }
+      }
       @media (min-width: $L) {
         position: absolute;
         width: 600px;
         height: 600px;
         padding: 0;
-        top: 0;
-        right: -70px;
+        top: -10px;
+        right: -50px;
         scale: 1.1;
       }
       &::after {

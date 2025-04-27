@@ -122,25 +122,6 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       failOnError: false,
-      routes: [
-        "/_ipx/f_webp&q_80&fit_inside&s_200x200/img/hero/front.png",
-        "/_ipx/f_webp&q_80&fit_inside&s_400x400/img/hero/front.png",
-        "/_ipx/f_webp&q_80&fit_inside&s_450x450/img/hero/front.png",
-        "/_ipx/f_webp&q_80&fit_inside&s_700x700/img/hero/front.png",
-        "/_ipx/f_webp&q_80&fit_inside&s_800x800/img/hero/front.png",
-        "/_ipx/f_webp&q_80&fit_inside&s_900x900/img/hero/front.png",
-        "/_ipx/f_webp&q_80&fit_inside&s_1000x1000/img/hero/front.png",
-        "/_ipx/f_webp&q_80&fit_inside&s_1400x1400/img/hero/front.png",
-        "/_ipx/f_webp&q_80&fit_inside&s_1600x1600/img/hero/front.png",
-        "/_ipx/f_webp&q_80&fit_inside&s_2000x2000/img/hero/front.png",
-        "/_ipx/f_webp&q_75&fit_inside&s_200x200/img/hero/back.png",
-        "/_ipx/f_webp&q_75&fit_inside&s_400x400/img/hero/back.png",
-        "/_ipx/f_webp&q_75&fit_inside&s_450x450/img/hero/back.png",
-        "/_ipx/f_webp&q_75&fit_inside&s_700x700/img/hero/back.png",
-        "/_ipx/f_webp&q_75&fit_inside&s_900x900/img/hero/back.png",
-        "/_ipx/f_webp&q_75&fit_inside&s_1400x1400/img/hero/back.png",
-        "/_ipx/f_webp&q_75&fit_inside&s_1800x1800/img/hero/back.png",
-      ],
     },
     routeRules: {
       "/_ipx/**": {
