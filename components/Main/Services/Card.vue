@@ -6,9 +6,10 @@
       <h3 class="card__title">{{ title }}</h3>
       <NuxtImg
         loading="lazy"
-        width="425"
-        height="225"
+        width="424"
+        height="218"
         format="webp"
+        :quality="60"
         :src="`/img/pros/${props.image}.jpg`"
         :alt="props.title"
         class="card__image image"

@@ -171,6 +171,10 @@ export default defineNuxtConfig({
     name: "Headshot",
   },
 
+  vitalizer: {
+    disableStylesheets: true,
+  },
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -194,7 +198,8 @@ export default defineNuxtConfig({
     "nuxt-toast",
     "@formkit/nuxt",
     "@formkit/auto-animate",
-    "nuxt-maplibre",
     "nuxt-delay-hydration",
+    "nuxt-vitalizer",
+    "nuxt-maplibre",
   ],
 });

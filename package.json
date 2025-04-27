@@ -28,6 +28,7 @@
     "nuxt-maplibre": "^1.1.1",
     "nuxt-svgo": "^4.0.17",
     "nuxt-toast": "^1.1.4",
+    "nuxt-vitalizer": "^0.10.0",
     "sass": "^1.87.0",
     "sharp": "^0.34.1",
     "swiper": "^11.2.6",

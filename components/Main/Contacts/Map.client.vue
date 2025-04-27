@@ -1,8 +1,8 @@
 <template>
-  <LazyMglMap :map-style="style" :center="center" :zoom="zoom">
-    <LazyMglNavigationControl />
-    <lazy-mgl-marker :coordinates="center" color="#cc0000" />
-  </LazyMglMap>
+  <MglMap :map-style="style" :center="center" :zoom="zoom">
+    <MglNavigationControl />
+    <mgl-marker :coordinates="center" color="#cc0000" />
+  </MglMap>
 </template>
 
 <script setup>

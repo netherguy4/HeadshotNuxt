@@ -19,7 +19,6 @@
               <NuxtImg
                 loading="eager"
                 src="/img/hero/front.png"
-                preload
                 :quality="80"
                 format="webp"
                 fit="inside"
@@ -32,7 +31,6 @@
               <NuxtImg
                 loading="eager"
                 src="/img/hero/back.png"
-                preload
                 format="webp"
                 fit="inside"
                 sizes="200px xs:450px sm:700px md:900px lg:700px"

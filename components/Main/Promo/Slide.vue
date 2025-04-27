@@ -4,9 +4,10 @@
       <div class="slide__image-wrapper image-wrapper">
         <NuxtImg
           loading="lazy"
-          width="360"
-          height="360"
+          width="349"
+          height="339"
           format="webp"
+          :quality="50"
           :src="`/img/promo/${props.image}`"
           :alt="props.title"
           class="slide__image image"

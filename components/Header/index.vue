@@ -6,7 +6,6 @@
           width="250"
           height="33"
           aria-hidden="true"
-          preload
           loading="eager"
           class="header__logo"
           src="/img/logo.png"
