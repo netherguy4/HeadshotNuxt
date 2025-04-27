@@ -2,7 +2,7 @@
   <section class="contacts">
     <div class="container contacts__container">
       <div class="contacts__map-wrapper image-wrapper">
-        <MainContactsMap />
+        <LazyMainContactsMap />
       </div>
       <address class="contacts__text">
         <h2 class="contacts__title title">Наші Контакти</h2>
