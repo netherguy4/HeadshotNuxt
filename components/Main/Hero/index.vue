@@ -86,7 +86,6 @@
 <script setup>
   gsap.registerPlugin(ScrollToPlugin);
 
-  // const img = useImage();
   const isLargeScreen = useMediaQuery("(min-width: 1024px)");
 
   const scrollToForm = () => {
@@ -96,8 +95,6 @@
       scrollTo: { y: "#price-form", offsetY: 80 },
     });
   };
-
-  // img.getSizes(src, { sizes, modifiers });
 </script>
 
 <style lang="scss" scoped>

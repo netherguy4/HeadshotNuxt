@@ -2,15 +2,24 @@
   <footer class="footer">
     <div class="container footer__container">
       <div class="footer__logo-container">
-        <NuxtLink to="/" class="image-wrapper footer__logo">
-          <svg class="image">
+        <NuxtLink
+          to="/"
+          aria-label="Повернутись на головну."
+          class="image-wrapper footer__logo"
+        >
+          <svg aria-hidden="true" class="image">
             <use href="#logo"></use>
           </svg>
         </NuxtLink>
         <span class="footer__copy">Політика Конфіденційності</span>
       </div>
       <NavigationComponent class="footer__navigation" />
-      <img src="/svg/dev.svg" loading="lazy" class="upack-logo" />
+      <img
+        alt="Разробник сайту. UPack."
+        src="/svg/dev.svg"
+        loading="lazy"
+        class="upack-logo"
+      />
     </div>
   </footer>
 </template>

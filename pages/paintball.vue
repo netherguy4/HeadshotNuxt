@@ -6,4 +6,7 @@
   definePageMeta({
     layout: "shooter",
   });
+  useHead({
+    title: "Пейнтбол",
+  });
 </script>

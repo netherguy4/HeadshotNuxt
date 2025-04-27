@@ -1,13 +1,11 @@
 <template>
-  <div>
-    
-  </div>
+  <div> </div>
 </template>
 
 <script setup>
-
+  useHead({
+    title: "Квести",
+  });
 </script>
 
-<style>
-
-</style>
+<style></style>

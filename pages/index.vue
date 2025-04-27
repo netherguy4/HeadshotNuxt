@@ -7,3 +7,9 @@
   <MainFaq class="main__section" />
   <MainSponsors class="main__section" />
 </template>
+
+<script setup>
+  useHead({
+    title: "Головна",
+  });
+</script>

@@ -11,44 +11,50 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "Upack project",
-      titleTemplate: "",
+      title: "Найбільший пейнтбол та страйкбол в Україні",
+      titleTemplate: "%s | HEADSHOT",
       meta: [
         {
           name: "description",
-          content: "",
+          content:
+            "Найбільший пейнтбольний та страйкбольний полігон в Україні. Одеса, вул. Сергія Ядова, 6. Понад 22000 кв.м. площі, 150+ комплектів обладнання, криті та відкриті локації, організація харчування.",
         },
         {
           name: "keywords",
-          content: "",
+          content:
+            "пейнтбол Одеса, страйкбол Одеса, полігон пейнтбол, полігон страйкбол, оренда обладнання, активний відпочинок Одеса, квести, джелібол, корпоративні ігри, тимбілдинг",
         },
         {
           name: "author",
-          content: "",
+          content: "Headshot",
         },
         {
           name: "apple-mobile-web-app-title",
-          content: "",
+          content: "Headshot",
         },
         {
           property: "og:title",
-          content: "",
+          content:
+            "Headshot — Найбільший пейнтбол та страйкбол в Україні | Одеса",
         },
         {
           property: "og:description",
-          content: "",
+          content:
+            "Більше 22000 кв.м. площі для пейнтболу та страйкболу в Одесі. Професійне обладнання, харчування, організація заходів.",
         },
         {
           property: "twitter:title",
-          content: "",
+          content:
+            "Headshot — Найбільший пейнтбол та страйкбол в Україні | Одеса",
         },
         {
           property: "twitter:description",
-          content: "",
+          content:
+            "Більше 22000 кв.м. площі для пейнтболу та страйкболу в Одесі. Професійне обладнання, харчування, організація заходів.",
         },
       ],
       htmlAttrs: {
-        lang: "",
+        lang: "uk",
       },
       link: [
         {
@@ -116,6 +122,25 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       failOnError: false,
+      routes: [
+        "/_ipx/f_webp&q_80&fit_inside&s_200x200/img/hero/front.png",
+        "/_ipx/f_webp&q_80&fit_inside&s_400x400/img/hero/front.png",
+        "/_ipx/f_webp&q_80&fit_inside&s_450x450/img/hero/front.png",
+        "/_ipx/f_webp&q_80&fit_inside&s_700x700/img/hero/front.png",
+        "/_ipx/f_webp&q_80&fit_inside&s_800x800/img/hero/front.png",
+        "/_ipx/f_webp&q_80&fit_inside&s_900x900/img/hero/front.png",
+        "/_ipx/f_webp&q_80&fit_inside&s_1000x1000/img/hero/front.png",
+        "/_ipx/f_webp&q_80&fit_inside&s_1400x1400/img/hero/front.png",
+        "/_ipx/f_webp&q_80&fit_inside&s_1600x1600/img/hero/front.png",
+        "/_ipx/f_webp&q_80&fit_inside&s_2000x2000/img/hero/front.png",
+        "/_ipx/f_webp&q_75&fit_inside&s_200x200/img/hero/back.png",
+        "/_ipx/f_webp&q_75&fit_inside&s_400x400/img/hero/back.png",
+        "/_ipx/f_webp&q_75&fit_inside&s_450x450/img/hero/back.png",
+        "/_ipx/f_webp&q_75&fit_inside&s_700x700/img/hero/back.png",
+        "/_ipx/f_webp&q_75&fit_inside&s_900x900/img/hero/back.png",
+        "/_ipx/f_webp&q_75&fit_inside&s_1400x1400/img/hero/back.png",
+        "/_ipx/f_webp&q_75&fit_inside&s_1800x1800/img/hero/back.png",
+      ],
     },
     routeRules: {
       "/_ipx/**": {
@@ -157,8 +182,8 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: "",
-    name: "",
+    url: "https://www.pbl.od.ua/",
+    name: "Headshot",
   },
 
   vite: {

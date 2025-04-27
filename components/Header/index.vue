@@ -1,8 +1,8 @@
 <template>
   <header class="header">
     <div class="container header__container">
-      <NuxtLink to="/">
-        <SvgoLogo id="logo" class="header__logo" />
+      <NuxtLink aria-label="Повернутись на головну." to="/">
+        <SvgoLogo aria-hidden="true" id="logo" class="header__logo" />
       </NuxtLink>
       <ClientOnly>
         <NavigationComponent class="header__navigation" />

@@ -4,6 +4,10 @@
   <MainSponsors class="main__section" />
 </template>
 
-<script setup></script>
+<script setup>
+  useHead({
+    title: "Акції",
+  });
+</script>
 
 <style></style>
