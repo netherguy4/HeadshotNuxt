@@ -97,6 +97,10 @@ export default defineNuxtConfig({
     "/css/vendors/formkit.scss",
   ],
 
+  delayHydration: {
+    mode: "init",
+  },
+
   image: {
     quality: 75,
   },
@@ -191,5 +195,6 @@ export default defineNuxtConfig({
     "@formkit/nuxt",
     "@formkit/auto-animate",
     "nuxt-maplibre",
+    "nuxt-delay-hydration",
   ],
 });

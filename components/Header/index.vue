@@ -2,11 +2,17 @@
   <header class="header">
     <div class="container header__container">
       <NuxtLink aria-label="Повернутись на головну." to="/">
-        <SvgoLogo aria-hidden="true" id="logo" class="header__logo" />
+        <NuxtImg
+          width="250"
+          height="33"
+          aria-hidden="true"
+          preload
+          loading="eager"
+          class="header__logo"
+          src="/img/logo.png"
+        />
       </NuxtLink>
-      <ClientOnly>
-        <NavigationComponent class="header__navigation" />
-      </ClientOnly>
+      <NavigationComponent style="display: none" class="header__navigation" />
       <address class="header__contacts">
         <SvgoPhone class="header__phone" />
         <a href="tel:+38(067)799 22 42" class="header__contact-number"
@@ -58,13 +64,12 @@
       }
     }
     &__navigation {
-      display: none;
+      // display: none;
       @media (min-width: $L) {
-        display: grid;
+        display: grid !important;
       }
     }
     &__logo {
-      color: #fff;
       width: tovw(132, 360);
       min-width: 132px;
       max-width: 250px;

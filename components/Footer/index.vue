@@ -7,9 +7,14 @@
           aria-label="Повернутись на головну."
           class="image-wrapper footer__logo"
         >
-          <svg aria-hidden="true" class="image">
-            <use href="#logo"></use>
-          </svg>
+          <NuxtImg
+            width="250"
+            height="33"
+            aria-hidden="true"
+            loading="lazy"
+            class="image"
+            src="/img/logo.png"
+          />
         </NuxtLink>
         <span class="footer__copy">Політика Конфіденційності</span>
       </div>
