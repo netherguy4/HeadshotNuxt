@@ -2,9 +2,12 @@
   <div class="slide">
     <div class="slide__container">
       <div class="slide__image-wrapper image-wrapper">
-        <img
+        <NuxtImg
           loading="lazy"
-          :src="`/img/promo/${props.image}.webp`"
+          width="360"
+          height="360"
+          format="webp"
+          :src="`/img/promo/${props.image}`"
           :alt="props.title"
           class="slide__image image"
         />

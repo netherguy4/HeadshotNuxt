@@ -52,6 +52,10 @@ export default defineNuxtConfig({
       },
       link: [
         {
+          rel: "preconnect",
+          href: "https://api.maptiler.com",
+        },
+        {
           rel: "icon",
           type: "image/png",
           href: "/favicon-96x96.png",
@@ -85,8 +89,6 @@ export default defineNuxtConfig({
     "/css/utils.scss",
     "/css/animations.scss",
     "/css/vendors/formkit.scss",
-    "/css/vendors/swiper.scss",
-    "/css/vendors/vue-toastifications.scss",
   ],
 
   image: {
@@ -122,6 +124,12 @@ export default defineNuxtConfig({
       "/img/**": {
         headers: { "cache-control": `public,max-age=${year},s-maxage=${year}` },
       },
+      "/svg/**": {
+        headers: { "cache-control": `public,max-age=${year},s-maxage=${year}` },
+      },
+      "/fonts/**": {
+        headers: { "cache-control": `public,max-age=${year},s-maxage=${year}` },
+      },
       "/_nuxt/**": {
         headers: { "cache-control": `public,max-age=${year},s-maxage=${year}` },
       },
@@ -138,6 +146,13 @@ export default defineNuxtConfig({
       prerender: {
         chromium: false,
       },
+    },
+  },
+
+  routeRules: {
+    "/telegram/**": {
+      proxy: `https://api.telegram.org/bot${import.meta.env.VITE_TELEGRAM_BOT_TOKEN}/**`,
+      cache: false,
     },
   },
 
@@ -166,5 +181,9 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/fonts",
     "nuxt-svgo",
+    "nuxt-toast",
+    "@formkit/nuxt",
+    "@formkit/auto-animate",
+    "nuxt-maplibre",
   ],
 });

@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="title promo__title">Актуальні акції</h2>
       <div class="promo__slider-container">
-        <swiper
+        <Swiper
           class="promo__slider"
           :modules="[Navigation, A11y]"
           :slides-per-view="'auto'"
@@ -15,7 +15,7 @@
           }"
           :lazy-preload-prev-next="1"
         >
-          <swiper-slide
+          <SwiperSlide
             :lazy="true"
             v-for="card in promo"
             :key="card.title"
@@ -27,16 +27,21 @@
               :image="card.image"
               class="promo__card"
             />
-          </swiper-slide>
-        </swiper>
+          </SwiperSlide>
+        </Swiper>
         <button class="promo__button promo__button--prev">
-          <SvgoSliderArrow class="promo__arrow" />
+          <SvgoSliderArrow class="slider-arrow" />
         </button>
         <button class="promo__button promo__button--next">
-          <SvgoSliderArrow class="promo__arrow" />
+          <SvgoSliderArrow class="slider-arrow" />
         </button>
       </div>
-      <img src="/svg/dash-curved.svg" alt="" class="promo__deco" />
+      <img
+        src="/svg/dash-curved-deco.svg"
+        alt=""
+        loading="lazy"
+        class="promo__deco"
+      />
     </div>
   </section>
 </template>
@@ -71,14 +76,16 @@
       }
     }
     &__deco {
-      pointer-events: none;
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 2;
-      height: 55%;
-      // height: percent(348, 518);
-      // width: 670px;
+      display: none;
+      @media (min-width: $M) {
+        display: initial;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        height: 55%;
+      }
     }
     &__slide {
       user-select: none;
@@ -92,8 +99,8 @@
       top: 50%;
       translate: 0 -50%;
       transition: $hoverTime;
-      width: 20px;
-      height: 20px;
+      width: 23px;
+      height: 23px;
       @media (min-width: $M) {
         width: 40px;
         height: 40px;
@@ -109,10 +116,6 @@
         pointer-events: none;
         opacity: 0.3;
       }
-    }
-    &__arrow {
-      width: 100%;
-      height: 100%;
     }
   }
 </style>

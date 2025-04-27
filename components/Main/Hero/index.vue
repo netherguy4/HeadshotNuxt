@@ -50,18 +50,30 @@
             >
               <SvgoVectorArrow filled class="hero__image--arrow image" />
               <SvgoDash filled class="hero__image--dash image" />
-              <img
+              <NuxtImg
                 loading="eager"
-                src="/img/hero/front_3x.webp"
-                width="427"
-                height="758"
-                srcset="
-                  /img/hero/front.webp    1x,
-                  /img/hero/front_2x.webp 2x,
-                  /img/hero/front_3x.webp 3x
-                "
+                src="/img/hero/front.png"
+                preload
+                :quality="80"
+                format="webp"
+                fit="inside"
+                sizes="200px xs:450px sm:700px md:1000px lg:800px"
+                width="792"
+                height="792"
                 alt="player"
                 class="hero__image--front image"
+              />
+              <NuxtImg
+                loading="eager"
+                src="/img/hero/back.png"
+                preload
+                format="webp"
+                fit="inside"
+                sizes="200px xs:450px sm:700px md:900px lg:700px"
+                width="680"
+                height="680"
+                alt="player"
+                class="hero__image--back image"
               />
             </component>
           </teleport>
@@ -74,6 +86,7 @@
 <script setup>
   gsap.registerPlugin(ScrollToPlugin);
 
+  // const img = useImage();
   const isLargeScreen = useMediaQuery("(min-width: 1024px)");
 
   const scrollToForm = () => {
@@ -83,6 +96,8 @@
       scrollTo: { y: "#price-form", offsetY: 80 },
     });
   };
+
+  // img.getSizes(src, { sizes, modifiers });
 </script>
 
 <style lang="scss" scoped>
@@ -196,14 +211,6 @@
         right: -70px;
         scale: 1.1;
       }
-      &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        translate: 0% 16%;
-        background: url("/img/hero/back.webp") center / 90% auto no-repeat;
-        rotate: 5deg;
-      }
       &::after {
         content: "";
         position: absolute;
@@ -225,6 +232,13 @@
       &--front {
         object-fit: contain;
         scale: 1.2;
+        z-index: 1;
+      }
+      &--back {
+        content: "";
+        translate: 0% 16%;
+        scale: 0.95;
+        rotate: 5deg;
       }
       &--dash {
         display: none;

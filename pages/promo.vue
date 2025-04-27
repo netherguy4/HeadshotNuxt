@@ -1,13 +1,9 @@
 <template>
-  <div>
-    
-  </div>
+  <MainPromo class="main__section" />
+  <MainWhyUs class="main__section" />
+  <MainSponsors class="main__section" />
 </template>
 
-<script setup>
+<script setup></script>
 
-</script>
-
-<style>
-
-</style>
+<style></style>

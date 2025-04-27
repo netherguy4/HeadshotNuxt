@@ -1,7 +1,9 @@
 <template>
-  <div> </div>
+  <MainPolygons folder="strikeball" class="main__section" />
 </template>
 
-<script setup></script>
-
-<style></style>
+<script setup>
+  definePageMeta({
+    layout: "shooter",
+  });
+</script>
