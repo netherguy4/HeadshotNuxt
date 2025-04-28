@@ -17,7 +17,7 @@
           <p class="slide__subtitle">{{ subtitle }}</p>
         </div>
       </div>
-      <button class="slide__button">Детальніше</button>
+      <a :href="props.href" target="_blank" class="slide__button">Детальніше</a>
     </div>
   </div>
 </template>
@@ -27,6 +27,10 @@
     title: String,
     subtitle: String,
     image: String,
+    href: {
+      type: String,
+      default: "https://www.instagram.com/headshot_od/",
+    },
   });
 </script>
 
@@ -70,8 +74,9 @@
     }
     &__button {
       will-change: transform;
+      text-align: center;
       background: #34b3cf;
-      padding: 12px 0;
+      padding: 14px 0;
       transform-origin: bottom;
       color: inherit;
       transition: $trTime;

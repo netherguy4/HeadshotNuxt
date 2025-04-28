@@ -14,10 +14,10 @@
       <NavigationComponent style="display: none" class="header__navigation" />
       <address class="header__contacts">
         <SvgoPhone class="header__phone" />
-        <a href="tel:+38(067)799 22 42" class="header__contact-number"
+        <a href="tel:+380677992242" class="header__contact-number"
           >+38(067)799 22 42</a
         >
-        <a href="tel:+38(063)397 76 77" class="header__contact-number"
+        <a href="tel:+380633977677" class="header__contact-number"
           >+38(063)397 76 77</a
         >
       </address>
