@@ -8,7 +8,13 @@
           :modules="[Navigation, A11y]"
           :slides-per-view="'auto'"
           :space-between="71"
-          :allow-touch-move="false"
+          grab-cursor
+          :breakpoints="{
+            768: {
+              allowTouchMove: false,
+              grabCursor: false,
+            },
+          }"
           :navigation="{
             prevEl: '.promo__button--prev',
             nextEl: '.promo__button--next',

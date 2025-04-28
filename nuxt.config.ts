@@ -101,6 +101,10 @@ export default defineNuxtConfig({
     mode: "init",
   },
 
+  fonts: {
+    priority: ["fontsource", "google"],
+  },
+
   image: {
     quality: 75,
   },

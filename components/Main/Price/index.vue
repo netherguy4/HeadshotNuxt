@@ -115,7 +115,7 @@
             name="name"
             type="text"
             label="Як до вас звертатися?"
-            validation="required | alpha:default | length:3"
+            validation="required | length:3"
             validation-visibility="submit"
             :classes="{
               wrapper: 'price__input-wrapper',
@@ -124,7 +124,6 @@
             }"
             :validation-messages="{
               required: 'Будь ласка, введiть ваше ім\'я',
-              alpha: 'Iм\'я не може містити цифри',
               length: 'Iм\'я повинно бути більше 2 символів',
             }"
           />

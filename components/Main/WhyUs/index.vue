@@ -78,9 +78,13 @@
         <image
           id="image0_572_36"
           width="2800"
-          height="2800"
-          preserveAspectRatio="none"
-          href="/img/why-us/image1.webp"
+          :href="
+            img('/img/why-us/image1.jpg', {
+              width: 1000,
+              height: 1000,
+              format: 'avif,webp',
+            })
+          "
         ></image>
         <pattern
           id="pattern0_171_776"
@@ -95,10 +99,14 @@
         </pattern>
         <image
           id="image0_171_776"
-          width="4200"
-          height="2800"
-          preserveAspectRatio="none"
-          href="/img/why-us/image2.webp"
+          width="3600"
+          :href="
+            img('/img/why-us/image2.jpg', {
+              width: 1080,
+              height: 900,
+              format: 'avif,webp',
+            })
+          "
         />
         <pattern
           id="pattern0_171_775"
@@ -113,10 +121,14 @@
         </pattern>
         <image
           id="image0_171_775"
-          width="3500"
-          height="2800"
-          preserveAspectRatio="none"
-          href="/img/why-us/image3.webp"
+          width="3700"
+          :href="
+            img('/img/why-us/image3.jpg', {
+              width: 1350,
+              height: 990,
+              format: 'avif,webp',
+            })
+          "
         />
         <pattern
           id="pattern0_171_774"
@@ -132,9 +144,13 @@
         <image
           id="image0_171_774"
           width="2300"
-          height="3450"
-          preserveAspectRatio="none"
-          href="/img/why-us/image4.webp"
+          :href="
+            img('/img/why-us/image4.jpg', {
+              width: 900,
+              height: 990,
+              format: 'avif,webp',
+            })
+          "
         />
         <pattern
           id="pattern0_572_38"
@@ -149,10 +165,14 @@
         </pattern>
         <image
           id="image0_572_38"
-          width="4000"
-          height="3000"
-          preserveAspectRatio="none"
-          href="/img/why-us/image5.webp"
+          width="3800"
+          :href="
+            img('/img/why-us/image5.jpg', {
+              width: 1200,
+              height: 900,
+              format: 'avif,webp',
+            })
+          "
         />
       </defs>
     </svg>
@@ -169,6 +189,8 @@
   import frame4 from "@/assets/svg/frame4.svg?raw";
   import frame5 from "@/assets/svg/frame5.svg?raw";
   // !!!
+
+  const img = useImage();
 
   gsap.registerPlugin(ScrollTrigger);
 
